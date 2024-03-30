@@ -40,8 +40,6 @@ export function SearchBar({ getSearchTerm, clearTerm, getPickerFilter }) {
         <Picker.Item label="Sem Filtro" value="Sem Filtro" />
         <Picker.Item label="A - Z" value="Ordem Crescente" />
         <Picker.Item label="Z - A" value="Ordem Decrescente" />
-        <Picker.Item label="Maior Preço" value="Maior Preço" />
-        <Picker.Item label="Menor Preço" value="Menor Preço" />
       </Picker>
       {searchTerm.length > 0 ? (
         <Pressable

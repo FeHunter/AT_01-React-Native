@@ -43,7 +43,7 @@ export default function App() {
         screenOptions={{
           headerTitleAlign: 'center',
         }}>
-        <Drawer.Screen name="My Tech Store" component={stackNav} />
+        <Drawer.Screen name="TechMart" component={stackNav} />
         <Drawer.Screen name="Sobré nós" component={About} />
       </Drawer.Navigator>
     );

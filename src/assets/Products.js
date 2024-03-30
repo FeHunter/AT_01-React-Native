@@ -1,7 +1,7 @@
-const LocalProducts = [
+const ProductsList = [
   {
     name: 'Notebook Dell Inspiron 15',
-    image: 'notebook_dell_inspiron_15.jpg',
+    image: 'https://cdn.pixabay.com/photo/2015/02/02/11/09/office-620822_1280.jpg',
     description:
       'Notebook de alto desempenho para uso profissional e entretenimento.',
     technicalSpecifications: {
@@ -42,7 +42,7 @@ const LocalProducts = [
   },
   {
     name: 'Monitor Gamer ASUS ROG Strix',
-    image: 'monitor_gamer_asus_rog_strix.jpg',
+    image: 'https://cdn.pixabay.com/photo/2017/08/01/18/34/tv-2567207_1280.jpg',
     description: 'Monitor de alta performance para gamers profissionais.',
     technicalSpecifications: {
       screenSize: '27 polegadas',
@@ -77,7 +77,7 @@ const LocalProducts = [
   },
   {
     name: 'Mouse Logitech G Pro Wireless',
-    image: 'mouse_logitech_g_pro_wireless.jpg',
+    image: 'https://cdn.pixabay.com/photo/2021/04/07/16/13/gaming-mouse-6159550_1280.jpg',
     description: 'Mouse sem fio de alto desempenho para jogos competitivos.',
     technicalSpecifications: {
       sensor: 'Hero 25K',
@@ -112,7 +112,7 @@ const LocalProducts = [
   },
   {
     name: 'Teclado Mecânico Corsair K95 RGB Platinum',
-    image: 'teclado_mecanico_corsair_k95_rgb_platinum.jpg',
+    image: 'https://cdn.pixabay.com/photo/2016/02/18/18/57/home-office-1207834_1280.jpg',
     description: 'Teclado mecânico premium com iluminação RGB personalizável.',
     technicalSpecifications: {
       switches: 'Cherry MX Speed',
@@ -146,7 +146,7 @@ const LocalProducts = [
   },
   {
     name: 'Headset HyperX Cloud II',
-    image: 'headset_hyperx_cloud_ii.jpg',
+    image: 'https://cdn.pixabay.com/photo/2014/11/02/06/46/headphones-513493_1280.jpg',
     description:
       'Headset com som surround 7.1 para uma experiência imersiva de áudio.',
     technicalSpecifications: {
@@ -181,7 +181,7 @@ const LocalProducts = [
   },
   {
     name: 'Placa de Vídeo NVIDIA GeForce RTX 3080',
-    image: 'placa_de_video_nvidia_geforce_rtx_3080.jpg',
+    image: 'https://s2-techtudo.glbimg.com/T3sUmSQ1Y4x6WfomwKn3T12KJmQ=/0x0:620x430/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/Z/C/JI2k1aTO6HLaAC3a3A2w/2012-12-20-conheca-opcoes-de-placas-de-video-de-acordo-com-seu-perfil-e-bolso.jpg',
     description:
       'Placa de vídeo de última geração para gráficos de alta performance.',
     technicalSpecifications: {
@@ -216,7 +216,7 @@ const LocalProducts = [
   },
   {
     name: 'Roteador TP-Link Archer AX6000',
-    image: 'roteador_tp_link_archer_ax6000.jpg',
+    image: 'https://cdn.pixabay.com/photo/2020/07/25/09/08/modem-5436146_1280.jpg',
     description:
       'Roteador Wi-Fi 6 de alta velocidade para residências e escritórios.',
     technicalSpecifications: {
@@ -251,7 +251,7 @@ const LocalProducts = [
   },
   {
     name: 'SSD Kingston A2000 1TB',
-    image: 'ssd_kingston_a2000_1tb.jpg',
+    image: 'https://cdn.pixabay.com/photo/2014/04/09/08/16/data-storage-319844_1280.jpg',
     description:
       'SSD NVMe de alta velocidade para melhorar o desempenho do seu PC.',
     technicalSpecifications: {
@@ -286,7 +286,7 @@ const LocalProducts = [
   },
   {
     name: 'Câmera Logitech C920 HD Pro',
-    image: 'camera_logitech_c920_hd_pro.jpg',
+    image: 'https://resource.logitech.com/content/dam/logitech/en/products/webcams/mx-brio/buy/gallery/mx-brio-3qtr-front-right-pale-gray-gallery.png',
     description: 'Câmera web Full HD para videochamadas e streaming.',
     technicalSpecifications: {
       resolution: '1080p',
@@ -320,7 +320,7 @@ const LocalProducts = [
   },
   {
     name: 'Smartphone Samsung Galaxy S22 Ultra',
-    image: 'smartphone_samsung_galaxy_s22_ultra.jpg',
+    image: 'https://cdn.pixabay.com/photo/2014/08/05/10/30/iphone-410324_1280.jpg',
     description:
       'Smartphone premium com câmera avançada e desempenho excepcional.',
     technicalSpecifications: {
@@ -357,7 +357,7 @@ const LocalProducts = [
   },
   {
     name: 'Router Cisco Catalyst 9300 Series',
-    image: 'router_cisco_catalyst_9300_series.jpg',
+    image: 'https://www.cisco.com/c/dam/assets/prod/product-selector/routers/catalyst-8500-12x4qc.png',
     description:
       'Roteador de alto desempenho para redes corporativas e data centers.',
     technicalSpecifications: {
@@ -393,7 +393,7 @@ const LocalProducts = [
   },
   {
     name: 'Smart TV LG OLED C1 65 polegadas',
-    image: 'smart_tv_lg_oled_c1_65_polegadas.jpg',
+    image: 'https://cdn.pixabay.com/photo/2015/02/07/20/58/tv-627876_1280.jpg',
     description:
       'TV OLED 4K com qualidade de imagem incrível e recursos inteligentes.',
     technicalSpecifications: {
@@ -429,7 +429,7 @@ const LocalProducts = [
   },
   {
     name: 'NVIDIA Jetson Nano Developer Kit',
-    image: 'nvidia_jetson_nano_developer_kit.jpg',
+    image: 'https://dcdn.mitiendanube.com/stores/001/888/523/products/141-8b3f7fc44733577c0716836500570605-480-0.jpg',
     description:
       'Plataforma de computação AI para aplicações embarcadas e de IoT.',
     technicalSpecifications: {
@@ -467,7 +467,7 @@ const LocalProducts = [
   },
   {
     name: 'Antivírus Bitdefender Total Security 2024',
-    image: 'antivirus_bitdefender_total_security_2024.jpg',
+    image: 'https://media.cybernews.com/images/featured-big/2023/08/bitdefender-antivirus-review.jpg',
     description:
       'Suite de segurança abrangente para proteger dispositivos contra ameaças online.',
     technicalSpecifications: {
@@ -502,4 +502,4 @@ const LocalProducts = [
   },
 ];
 
-export default LocalProducts;
+export default ProductsList;

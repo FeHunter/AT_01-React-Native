@@ -7,11 +7,10 @@ export function ProductCard({ product, navigation }) {
       style={styles.card}
       onPress={() => navigation.navigate(Routes.details, { product: product })}>
       <View style={styles.header}>
-        <Text style={styles.title}>{product.nome}</Text>
-        <Text>R${product.preco}</Text>
+        <Text style={styles.title}>{product.name}</Text>
       </View>
       <View style={styles.body}>
-        <Image source={{ uri: product.imagens[0] }} style={styles.imagem} />
+        <Image source={{ uri: product.image }} style={styles.imagem} />
         <Text>{product.descricao}</Text>
       </View>
     </Pressable>
@@ -55,7 +54,7 @@ descricao
 duvidas         array
 id
 imagens         array
-nome
+name
 preco
 
 */

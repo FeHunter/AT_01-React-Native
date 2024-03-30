@@ -4,7 +4,7 @@ import { FaqCard } from '../../components/Cards/FaqCard';
 
 export function ProdcutFaq({ route }) {
   const { product } = route.params;
-  const duvidas = product.duvidas;
+  const duvidas = product.questions;
   
   // Loading...
   const [isLoading, setIsLoading] = useState(true);

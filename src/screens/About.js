@@ -20,20 +20,13 @@ export function About() {
   return (
     <View style={style.container}>
       <View style={style.card}>
-        <Text style={style.text}>
-          Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem{' '}
+        <Text style={style.title}>
+          TechMart - Sua Loja de Tecnologia Online
         </Text>
         <Text style={style.text}>
-          Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-          Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-          Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-          Lorem Lorem Lorem
+          TechMart é a sua loja de tecnologia online, oferecendo uma ampla variedade de produtos de última geração, desde smartphones e laptops até gadgets inteligentes e acessórios. Navegue em nosso catálogo diversificado, desfrute de ofertas exclusivas e receba seus produtos com conveniência na sua porta. Com políticas flexíveis de devolução e troca e suporte ao cliente dedicado, estamos aqui para tornar sua experiência de compra online simples e satisfatória.
         </Text>
-        <Text style={style.text}>
-          Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-          Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-        </Text>
-        <Text style={style.text}>
+        <Text style={style.footerText}>
           AT_01 - React Native, by Felipe Rodrigues
         </Text>
       </View>
@@ -43,33 +36,58 @@ export function About() {
 
 const styleHorizontal = StyleSheet.create({
   container: {
-    width: '100%',
-    height: '100%',
-    padding: 5,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 10,
   },
   card: {
-    width: '60%',
-    height: '100%',
+    width: '80%',
+  },
+  title: {
+    textAlign: 'center',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
   },
   text: {
-    marginVertical: 10,
     fontSize: 18,
+    textAlign: 'justify',
+    lineHeight: 24,
+  },
+  footerText: {
+    fontSize: 16,
+    fontStyle: 'italic',
+    color: 'gray',
+    textAlign: 'center',
+    marginTop: 20,
   },
 });
 
 const styleVertical = StyleSheet.create({
   container: {
-    width: '100%',
-    height: '100%',
-    padding: 5,
+    flex: 1,
+    padding: 10,
   },
   card: {
     width: '100%'
   },
+  title: {
+    textAlign: 'center',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
   text: {
-    marginVertical: 10,
     fontSize: 18,
+    textAlign: 'justify',
+    lineHeight: 24,
+  },
+  footerText: {
+    fontSize: 16,
+    fontStyle: 'italic',
+    color: 'gray',
+    textAlign: 'center',
+    marginTop: 20,
   },
 });

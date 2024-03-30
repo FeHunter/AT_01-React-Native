@@ -24,12 +24,10 @@ export function FaqCard({ item }) {
       <View style={cardStyle}>
         <View style={styles.header}>
           <Text style={{ fontSize: 18, fontWeight: 500 }}>
-            Usuário: {item.usuario}
+            Usuário: {item.user}
           </Text>
           <Text style={{ fontSize: 16, fontStyle: 'italic' }}>
-            {new Date(item.data).toLocaleDateString('pt-BR', {
-              timeZone: 'UTC',
-            })}
+            {item.date}
           </Text>
         </View>
         <View style={styles.body}>
@@ -42,7 +40,7 @@ export function FaqCard({ item }) {
               }}>
               Pergunta:
             </Text>
-            <Text style={styles.text}>{item.pergunta}</Text>
+            <Text style={styles.text}>{item.question}</Text>
           </View>
           <View>
             <Text
@@ -53,7 +51,7 @@ export function FaqCard({ item }) {
               }}>
               Resposta:
             </Text>
-            <Text style={styles.text}>{item.resposta}</Text>
+            <Text style={styles.text}>{item.answer}</Text>
           </View>
         </View>
       </View>
@@ -75,20 +73,36 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     paddingHorizontal: 10,
     paddingVertical: 15,
-    borderWidth: 1,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 2,
+    backgroundColor: '#fff',
   },
   cardV: {
     width: '100%',
     marginVertical: 5,
     paddingHorizontal: 10,
     paddingVertical: 15,
-    borderWidth: 1,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 2,
+    backgroundColor: '#fff',
   },
   header: {
     height: '20%',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    aligncomentarios: 'center',
+    alignItems: 'center',
   },
   body: {
     height: '80%',
@@ -98,3 +112,4 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
 });
+

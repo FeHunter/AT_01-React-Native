@@ -24,12 +24,10 @@ export function CommentCard({ item }) {
       <View style={cardStyle}>
         <View style={styles.header}>
           <Text style={{ fontSize: 18, fontWeight: 500 }}>
-            Usuário: {item.usuario}
+            Usuário: {item.user}
           </Text>
           <Text style={{ fontSize: 16, fontStyle: 'italic' }}>
-            {new Date(item.data).toLocaleDateString('pt-BR', {
-              timeZone: 'UTC',
-            })}
+            {item.date}
           </Text>
         </View>
         <View style={styles.body}>
@@ -42,9 +40,9 @@ export function CommentCard({ item }) {
               }}>
               Comentário:
             </Text>
-            <Text style={styles.text}>{item.comentario}</Text>
+            <Text style={styles.text}>{item.comment}</Text>
             <Text style={{ fontSize: 18, fontWeight: 500, marginVertical: 5 }}>
-              Nota {item.nota}/5
+              Nota {item.rating}/5
             </Text>
           </View>
         </View>
@@ -55,6 +53,7 @@ export function CommentCard({ item }) {
 
 const styles = StyleSheet.create({
   horizontal: {
+    flex: 1,
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
@@ -68,7 +67,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 15,
     marginVertical: 10,
-    borderWidth: 1,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 2,
+    backgroundColor: '#fff',
   },
   cardV: {
     width: '100%',
@@ -76,13 +83,21 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 15,
     marginVertical: 10,
-    borderWidth: 1,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 2,
+    backgroundColor: '#fff',
   },
   header: {
     height: '30%',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    aligncomentarios: 'center',
+    alignItems: 'center',
   },
   body: {
     height: '70%',

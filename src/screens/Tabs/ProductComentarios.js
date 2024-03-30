@@ -10,7 +10,7 @@ import { CommentCard } from '../../components/Cards/CommentCard';
 
 export function ProductComentarios({ route }) {
   const { product } = route.params;
-  const comentarios = product.comentarios;
+  const comentarios = product.comments;
 
   // Loading...
   const [isLoading, setIsLoading] = useState(true);

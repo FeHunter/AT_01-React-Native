@@ -2,8 +2,13 @@ import { View, Text, Image, StyleSheet, ActivityIndicator, Dimensions } from 're
 import Routes from '../../assets/Routes';
 import { useEffect, useState } from 'react';
 
-export function ProductGeral({ route }) {
+export function ProductSpecifications({ route }) {
   const { product } = route.params;
+
+  // Pega detalhes e passa para uma array que usando o map vai mostra as especificações, já que cada produto tem nomes diferetes para as especicações.
+  const spec = Object.keys(product.technicalSpecifications);
+  // console.log(spec);
+
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -38,7 +43,11 @@ export function ProductGeral({ route }) {
           </View>
           <View style={style.body}>
             <Image source={{ uri: product.image }} style={style.imagem} />
-            <Text style={style.descricao}>{product.description}</Text>
+            {
+              spec.map((element, key) => (
+                <Text key={key} style={style.text}>{product.technicalSpecifications[element]}</Text>
+              ))
+            }
           </View>
         </View>
       )}
@@ -52,10 +61,9 @@ const styleHorizontal = StyleSheet.create({
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 10,
   },
   card: {
-    width: '70%',
+    width: '80%',
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
@@ -75,65 +83,55 @@ const styleHorizontal = StyleSheet.create({
   },
   imagem: {
     width: '100%',
-    height: 300,
-    resizeMode: 'contain',
+    height: 500,
+    resizeMode: 'contain'
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: 600,
   },
-  preco: {
-    fontSize: 16,
-    fontStyle: 'italic',
-    textAlign: 'center',
-  },
-  descricao: {
+  text: {
     fontSize: 18,
-    textAlign: 'center',
+    textAlign: 'left',
+    marginVertical: 10,
   },
 });
 
 const styleVertical = StyleSheet.create({
   container: {
-    width: '100%',
+    flex: 1,
     padding: 10,
   },
   card: {
-    width: '100%',
-    height: '100%',
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: 15,
   },
   header: {
-    width: '100%',
-    height: '10%',
+    flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 20,
   },
   body: {
-    height: '90%',
-    justifyContent: 'space-around',
+    flex: 3,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 10,
   },
   imagem: {
     width: '100%',
-    height: 300,
-    resizeMode: 'contain',
+    height: 150,
+    resizeMode: 'center',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
   },
-  preco: {
-    fontSize: 16,
-    fontStyle: 'italic',
-    textAlign: 'center',
-  },
-  descricao: {
+  text: {
     fontSize: 18,
-    textAlign: 'center',
+    textAlign: 'left',
+    marginVertical: 10,
   },
 });
-

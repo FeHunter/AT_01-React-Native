@@ -9,23 +9,18 @@ import {
 import { ProductCard } from '../components/Product/ProductCard';
 import { SearchBar } from '../components/Search/SearchBar';
 
-import { LocalProducts } from '../assets/Products';
+import ProductsList from '../assets/Products';
 
 export function ProductList({ navigation }) {
-  const url =
-    'https://t3t4-dfe-pb-grl-m1-default-rtdb.firebaseio.com/products.json';
 
   const [orientation, setOrientation] = useState(false);
 
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(ProductsList);
   const [searchTerm, setSearchTerm] = useState('');
   const [pickerFilter, setpickerFilter] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    loadProducts();
-    // setProducts(LocalProducts);
-
     // Orientação da tela
     const updateOrientation = () => {
       const { width, height } = Dimensions.get('window');
@@ -36,27 +31,6 @@ export function ProductList({ navigation }) {
       Dimensions.removeEventListener('change', updateOrientation);
     };
   }, []);
-
-  async function loadProducts() {
-    setIsLoading(true);
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setProducts(convertData(data));
-    } catch (error) {
-      console.log(error.message);
-    } finally {
-      setIsLoading(false);
-    }
-  }
-
-  function convertData(data) {
-    const ids = Object.keys(data);
-    const objs = Object.values(data);
-    return objs.map((item, i) => {
-      return { id: ids[i], ...item };
-    });
-  }
 
   function getSearchTerm(term) {
     setSearchTerm(term);
@@ -72,11 +46,11 @@ export function ProductList({ navigation }) {
 
   function filter() {
     let updateList = [...products];
-    // Pesquisa por nome ou descrição
+    // Pesquisa por name ou descrição
     updateList = updateList.filter((product) => {
       return (
-        product.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.descricao
+        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.description
           .toString()
           .toLowerCase()
           .includes(searchTerm.toLowerCase())
@@ -84,13 +58,9 @@ export function ProductList({ navigation }) {
     });
     // Ordem conforme o picker selection
     if (pickerFilter === 'Ordem Crescente') {
-      updateList.sort((a, b) => a.nome.localeCompare(b.nome));
+      updateList.sort((a, b) => a.name.localeCompare(b.name));
     } else if (pickerFilter === 'Ordem Decrescente') {
-      updateList.sort((a, b) => b.nome.localeCompare(a.nome));
-    } else if (pickerFilter === 'Maior Preço') {
-      updateList.sort((a, b) => b.preco - a.preco);
-    } else if (pickerFilter === 'Menor Preço') {
-      updateList.sort((a, b) => a.preco - b.preco);
+      updateList.sort((a, b) => b.name.localeCompare(a.name));
     }
     return (
       <FlatList
@@ -143,8 +113,9 @@ export function ProductList({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 10,
+    padding: 0,
   },
   listContainer: {
     flex: 1,
@@ -155,8 +126,9 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    overflowy: 'scroll',
+    overflowY: 'scroll',
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
 });
+

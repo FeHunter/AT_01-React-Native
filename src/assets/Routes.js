@@ -6,6 +6,7 @@ const Routes = {
     productGeral: 'Informações',
     comments: 'Comentários',
     faq: 'Dúvidas',
-    seller: 'Sobré o Vendedor',
+    seller: 'Vendedor',
+    specifications: 'Especificações',
 }
 export default Routes;

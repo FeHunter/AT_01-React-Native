@@ -2,7 +2,8 @@ import { View, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Routes from '../assets/Routes';
 
-import { ProductImage } from './Tabs/ProductImage';
+// Tabs Screens
+import { ProductSpecifications } from './Tabs/ProductSpecifications';
 import { ProductGeral } from './Tabs/ProductGeral';
 import { ProductComentarios } from './Tabs/ProductComentarios';
 import { ProdcutFaq } from './Tabs/ProductFaq';
@@ -19,6 +20,11 @@ export function ProductDetails({ route }) {
         <Tab.Screen
           name={Routes.productGeral}
           component={ProductGeral}
+          initialParams={{ product: product }}
+        />
+        <Tab.Screen
+          name={Routes.specifications}
+          component={ProductSpecifications}
           initialParams={{ product: product }}
         />
         <Tab.Screen
