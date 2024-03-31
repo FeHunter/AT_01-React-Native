@@ -27,7 +27,8 @@ export default function App() {
         screenOptions={{
           headerShown: true,
           headerTitleAlign: 'center',
-          headerStyle: {height: 30}
+          headerStyle: {height: 30},
+          headerTitleStyle: { fontSize: '1.3em' }
           }}
         >
         <Stack.Screen name={Routes.products} component={ProductList} />

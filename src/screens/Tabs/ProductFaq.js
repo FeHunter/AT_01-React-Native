@@ -16,7 +16,7 @@ export function ProdcutFaq({ route }) {
 
   return (
     <View style={styles.container}>
-      <Text style={{ textAlign: 'center', fontSize: 20, marginVertical: 10 }}>
+      <Text style={{ textAlign: 'center', fontSize: '1.8em', marginVertical: 10 }}>
         Dúvidas
       </Text>
       { isLoading ? <ActivityIndicator size="large" color="#0000ff" />

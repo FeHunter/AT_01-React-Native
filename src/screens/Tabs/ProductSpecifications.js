@@ -79,7 +79,8 @@ const styleHorizontal = StyleSheet.create({
   },
   body: {
     height: '90%',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
   },
   imagem: {
     width: '100%',
@@ -87,14 +88,12 @@ const styleHorizontal = StyleSheet.create({
     resizeMode: 'contain'
   },
   title: {
-    fontSize: 24,
-    fontWeight: 600,
+    fontSize: '2em'
   },
   text: {
-    fontSize: 18,
+    fontSize: '1.3em',
     textAlign: 'left',
-    marginVertical: 10,
-  },
+  }
 });
 
 const styleVertical = StyleSheet.create({
@@ -117,21 +116,19 @@ const styleVertical = StyleSheet.create({
   body: {
     flex: 3,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     paddingVertical: 10,
   },
   imagem: {
     width: '100%',
-    height: 150,
+    height: 200,
     resizeMode: 'center',
   },
   title: {
-    fontSize: 24,
-    fontWeight: 'bold',
+    fontSize: '2em'
   },
   text: {
-    fontSize: 18,
+    fontSize: '1.3em',
     textAlign: 'left',
-    marginVertical: 10,
-  },
+  }
 });

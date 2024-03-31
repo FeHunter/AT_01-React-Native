@@ -53,11 +53,11 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   title: {
-    fontSize: 24,
+    fontSize: '2em',
     fontWeight: 'bold',
   },
   descricao: {
-    fontSize: 18,
+    fontSize: '1.2em',
     textAlign: 'center',
   },
 });

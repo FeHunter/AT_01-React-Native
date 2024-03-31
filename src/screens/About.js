@@ -46,17 +46,17 @@ const styleHorizontal = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    fontSize: 24,
+    fontSize: '2em',
     fontWeight: 'bold',
     marginBottom: 10,
   },
   text: {
-    fontSize: 18,
+    fontSize: '1.3em',
     textAlign: 'justify',
     lineHeight: 24,
   },
   footerText: {
-    fontSize: 16,
+    fontSize: '1em',
     fontStyle: 'italic',
     color: 'gray',
     textAlign: 'center',
@@ -74,17 +74,17 @@ const styleVertical = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    fontSize: 24,
+    fontSize: '2em',
     fontWeight: 'bold',
     marginBottom: 10,
   },
   text: {
-    fontSize: 18,
+    fontSize: '1.3em',
     textAlign: 'justify',
     lineHeight: 24,
   },
   footerText: {
-    fontSize: 16,
+    fontSize: '1em',
     fontStyle: 'italic',
     color: 'gray',
     textAlign: 'center',

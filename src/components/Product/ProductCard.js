@@ -42,19 +42,8 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
   },
   title: {
-    fontSize: 16,
-    fontWeight: 600,
+    fontSize: '1.3em',
+    fontWeight: 'bold',
   },
 });
 
-/*
-
-comentarios     array
-descricao
-duvidas         array
-id
-imagens         array
-name
-preco
-
-*/

@@ -23,10 +23,10 @@ export function FaqCard({ item }) {
     <View style={containerStyle}>
       <View style={cardStyle}>
         <View style={styles.header}>
-          <Text style={{ fontSize: 18, fontWeight: 500 }}>
+          <Text style={{ fontSize: '1.2em', fontWeight: 'bold' }}>
             Usuário: {item.user}
           </Text>
-          <Text style={{ fontSize: 16, fontStyle: 'italic' }}>
+          <Text style={{ fontSize: '1.1em', fontStyle: 'italic' }}>
             {item.date}
           </Text>
         </View>
@@ -35,7 +35,7 @@ export function FaqCard({ item }) {
             <Text
               style={{
                 fontStyle: 'italic',
-                fontSize: 16,
+                fontSize: '1.2em',
                 color: 'gray',
               }}>
               Pergunta:
@@ -46,7 +46,7 @@ export function FaqCard({ item }) {
             <Text
               style={{
                 fontStyle: 'italic',
-                fontSize: 16,
+                fontSize: '1.2em',
                 color: 'gray',
               }}>
               Resposta:
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   text: {
-    fontSize: 18,
+    fontSize: '1.3em',
   },
 });
 

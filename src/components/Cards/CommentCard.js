@@ -23,10 +23,10 @@ export function CommentCard({ item }) {
     <View style={containerStyle}>
       <View style={cardStyle}>
         <View style={styles.header}>
-          <Text style={{ fontSize: 18, fontWeight: 500 }}>
+          <Text style={{ fontSize: '1.2em', fontWeight: 'bold' }}>
             Usuário: {item.user}
           </Text>
-          <Text style={{ fontSize: 16, fontStyle: 'italic' }}>
+          <Text style={{ fontSize: '1.1em', fontStyle: 'italic' }}>
             {item.date}
           </Text>
         </View>
@@ -35,13 +35,13 @@ export function CommentCard({ item }) {
             <Text
               style={{
                 fontStyle: 'italic',
-                fontSize: 16,
+                fontSize: '1.1em',
                 color: 'gray',
               }}>
               Comentário:
             </Text>
             <Text style={styles.text}>{item.comment}</Text>
-            <Text style={{ fontSize: 18, fontWeight: 500, marginVertical: 5 }}>
+            <Text style={{ fontSize: '1.2em', fontWeight: 'bold', marginVertical: 5 }}>
               Nota {item.rating}/5
             </Text>
           </View>
@@ -104,6 +104,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   text: {
-    fontSize: 18,
+    fontSize: '1.2em',
   },
 });

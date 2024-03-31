@@ -79,16 +79,11 @@ const styleHorizontal = StyleSheet.create({
     resizeMode: 'contain',
   },
   title: {
-    fontSize: 24,
+    fontSize: '2em',
     fontWeight: 'bold',
   },
-  preco: {
-    fontSize: 16,
-    fontStyle: 'italic',
-    textAlign: 'center',
-  },
   descricao: {
-    fontSize: 18,
+    fontSize: '1.2em',
     textAlign: 'center',
   },
 });
@@ -123,16 +118,11 @@ const styleVertical = StyleSheet.create({
     resizeMode: 'contain',
   },
   title: {
-    fontSize: 24,
+    fontSize: '2em',
     fontWeight: 'bold',
   },
-  preco: {
-    fontSize: 16,
-    fontStyle: 'italic',
-    textAlign: 'center',
-  },
   descricao: {
-    fontSize: 18,
+    fontSize: '1.2em',
     textAlign: 'center',
   },
 });
