@@ -83,8 +83,8 @@ const styleHorizontal = StyleSheet.create({
     alignItems: 'flex-start',
   },
   imagem: {
-    width: '100%',
-    height: 500,
+    width: 400,
+    height: 300,
     resizeMode: 'contain'
   },
   title: {
@@ -120,7 +120,7 @@ const styleVertical = StyleSheet.create({
     paddingVertical: 10,
   },
   imagem: {
-    width: '100%',
+    width: 300,
     height: 200,
     resizeMode: 'center',
   },
