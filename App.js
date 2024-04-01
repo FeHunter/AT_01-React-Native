@@ -20,7 +20,7 @@ import { About } from './src/screens/About';
 export default function App() {
   const Stack = createStackNavigator();
 
-  const stackNav = () => {
+  const StackNav = () => {
     return (
       <Stack.Navigator
         initialRouteName={Routes.products}
@@ -44,7 +44,7 @@ export default function App() {
         screenOptions={{
           headerTitleAlign: 'center',
         }}>
-        <Drawer.Screen name="TechMart" component={stackNav} />
+        <Drawer.Screen name="TechMart" component={StackNav} />
         <Drawer.Screen name="Sobré nós" component={About} />
       </Drawer.Navigator>
     );

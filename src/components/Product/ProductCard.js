@@ -20,10 +20,14 @@ export function ProductCard({ product, navigation }) {
 const styles = StyleSheet.create({
   card: {
     width: 300,
-    height: 350,
     justifyContent: 'space-between',
     borderBottomWidth: 2,
     margin: 20,
+    padding: 10,
+    elevation: 10, 
+    shadowColor: 'gray',
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
   },
   header: {
     height: '10%',
